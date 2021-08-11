@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v04-xH-AFr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="c1L-qD-lmt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4p-VV-VSv">
+                                        <rect key="frame" x="17" y="177" width="255" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c1L-qD-lmt" secondAttribute="trailing" id="0Ib-du-oih"/>
+                                    <constraint firstAttribute="trailing" secondItem="G4p-VV-VSv" secondAttribute="trailing" constant="142" id="A6T-f3-uHs"/>
+                                    <constraint firstItem="G4p-VV-VSv" firstAttribute="top" secondItem="v04-xH-AFr" secondAttribute="top" constant="177" id="EDS-eP-htP"/>
+                                    <constraint firstItem="c1L-qD-lmt" firstAttribute="top" secondItem="v04-xH-AFr" secondAttribute="top" id="EXz-be-Mhy"/>
+                                    <constraint firstAttribute="bottom" secondItem="c1L-qD-lmt" secondAttribute="bottom" id="Ph9-No-ZmS"/>
+                                    <constraint firstAttribute="bottom" secondItem="G4p-VV-VSv" secondAttribute="bottom" constant="659" id="ixK-9d-52v"/>
+                                    <constraint firstItem="G4p-VV-VSv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v04-xH-AFr" secondAttribute="leading" constant="17" id="k0Z-xa-hEx"/>
+                                    <constraint firstItem="c1L-qD-lmt" firstAttribute="leading" secondItem="v04-xH-AFr" secondAttribute="leading" id="nkm-hg-ya6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v04-xH-AFr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="scl-lF-GTv"/>
+                            <constraint firstAttribute="bottom" secondItem="v04-xH-AFr" secondAttribute="bottom" id="tem-xI-v0u"/>
+                            <constraint firstAttribute="trailing" secondItem="v04-xH-AFr" secondAttribute="trailing" id="tex-4Q-653"/>
+                            <constraint firstAttribute="top" secondItem="v04-xH-AFr" secondAttribute="top" id="vWJ-dW-T4c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchScreen" width="2160" height="3840"/>
+    </resources>
+</document>
