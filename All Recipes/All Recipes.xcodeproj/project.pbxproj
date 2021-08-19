@@ -17,7 +17,7 @@
 		07520B8326C41667008A0D55 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B7E26C41667008A0D55 /* RecipeDetailsViewController.swift */; };
 		07520B8426C41667008A0D55 /* AreaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B7F26C41667008A0D55 /* AreaTableViewController.swift */; };
 		07520B8526C41667008A0D55 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B8026C41667008A0D55 /* CategoryTableViewController.swift */; };
-		07520B8A26C4166F008A0D55 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B8626C4166F008A0D55 /* Categories.swift */; };
+		07520B8A26C4166F008A0D55 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B8626C4166F008A0D55 /* CategoriesModel.swift */; };
 		07520B8B26C4166F008A0D55 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B8726C4166F008A0D55 /* Recipes.swift */; };
 		07520B8C26C4166F008A0D55 /* FilterByCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B8826C4166F008A0D55 /* FilterByCategories.swift */; };
 		07520B8D26C4166F008A0D55 /* Areas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07520B8926C4166F008A0D55 /* Areas.swift */; };
@@ -43,7 +43,7 @@
 		07520B7E26C41667008A0D55 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		07520B7F26C41667008A0D55 /* AreaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaTableViewController.swift; sourceTree = "<group>"; };
 		07520B8026C41667008A0D55 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		07520B8626C4166F008A0D55 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		07520B8626C4166F008A0D55 /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		07520B8726C4166F008A0D55 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		07520B8826C4166F008A0D55 /* FilterByCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterByCategories.swift; sourceTree = "<group>"; };
 		07520B8926C4166F008A0D55 /* Areas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Areas.swift; sourceTree = "<group>"; };
@@ -103,10 +103,10 @@
 		07520B7726C414F6008A0D55 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				07520B9326C41680008A0D55 /* AreaViewModel.swift */,
 				07520B9026C41680008A0D55 /* CategoryViewModel.swift */,
 				07520B9226C41680008A0D55 /* FilterCategoryViewModel.swift */,
 				07520B9126C41680008A0D55 /* RecipeViewModel.swift */,
+				07520B9326C41680008A0D55 /* AreaViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -114,10 +114,10 @@
 		07520B7826C4150E008A0D55 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				07520B8926C4166F008A0D55 /* Areas.swift */,
-				07520B8626C4166F008A0D55 /* Categories.swift */,
+				07520B8626C4166F008A0D55 /* CategoriesModel.swift */,
 				07520B8826C4166F008A0D55 /* FilterByCategories.swift */,
 				07520B8726C4166F008A0D55 /* Recipes.swift */,
+				07520B8926C4166F008A0D55 /* Areas.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,11 +133,11 @@
 		07520B7B26C4161C008A0D55 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				07520B7F26C41667008A0D55 /* AreaTableViewController.swift */,
 				07520B7C26C41667008A0D55 /* CategoriesTableViewController.swift */,
 				07520B8026C41667008A0D55 /* CategoryTableViewController.swift */,
 				07520B7D26C41667008A0D55 /* FavouritesTableViewController.swift */,
 				07520B7E26C41667008A0D55 /* RecipeDetailsViewController.swift */,
+				07520B7F26C41667008A0D55 /* AreaTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07520B8526C41667008A0D55 /* CategoryTableViewController.swift in Sources */,
-				07520B8A26C4166F008A0D55 /* Categories.swift in Sources */,
+				07520B8A26C4166F008A0D55 /* CategoriesModel.swift in Sources */,
 				07520B8C26C4166F008A0D55 /* FilterByCategories.swift in Sources */,
 				07520B9726C41680008A0D55 /* AreaViewModel.swift in Sources */,
 				07520B8F26C41676008A0D55 /* DataService.swift in Sources */,

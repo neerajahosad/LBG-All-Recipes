@@ -8,38 +8,20 @@
 
 import Foundation
 
-struct CategoryListViewModel {
-    let categories: [Category]
+protocol CategoryViewModelProtocol {
+    func didUpdateCategories()
 }
-
-extension CategoryListViewModel {
-    var numberOfSections: Int {
-        return 1
-    }
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return self.categories.count
-    }
-    func categoryAtIndex(_ index: Int) -> CategoryViewModel {
-        let category = self.categories[index]
-        return CategoryViewModel(category)
-    }
-}
-
-struct CategoryViewModel {
-    private let category: Category
-}
-
-extension CategoryViewModel {
-    init(_ category: Category) {
-        self.category = category
-    }
-    var title: String {
-        return self.category.strCategory
-    }
-    var description: String {
-        return self.category.strCategoryDescription
-    }
-    var image:String{
-        return self.category.strCategoryThumb
+class CategoryViewModel: NSObject {
+    var delegate: CategoryViewModelProtocol?
+    fileprivate(set) var categories: [CategoryModel] = []
+    
+    private var dataService = DataService()
+    
+    func fetchCategories(){
+        let all_categories_url = "https://www.themealdb.com/api/json/v1/1/categories.php"
+        dataService.loadCategoriesAPIRequest(with: URL(string: all_categories_url)!){ categories in
+            self.categories = categories
+            self.delegate?.didUpdateCategories()
+        }
     }
 }

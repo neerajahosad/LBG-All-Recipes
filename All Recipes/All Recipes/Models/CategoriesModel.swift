@@ -1,5 +1,5 @@
 //
-//  Categories.swift
+//  CategoriesModel.swift
 //  All Recipes
 //
 //  Created by Neeraja Hosad on 07/08/21.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Categories : Codable{
-    let all : [Category]
+struct CategoriesModel : Codable{
+    let all : [CategoryModel]
     
     enum CodingKeys: String, CodingKey {
         case all = "categories"
     }
 }
 
-struct Category : Codable{
+struct CategoryModel : Codable{
     let idCategory, strCategory, strCategoryThumb, strCategoryDescription : String
 }

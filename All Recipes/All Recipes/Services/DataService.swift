@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 class DataService{
-    func loadCategoriesAPIRequest(with url : URL,completion : @escaping ([Category]) -> ()){
+    func loadCategoriesAPIRequest(with url : URL,completion : @escaping ([CategoryModel]) -> ()){
         AF.request(url).validate()
-            .responseDecodable(of: Categories.self) {(response) in
+            .responseDecodable(of: CategoriesModel.self) { response in
                 if let categories = response.value {
                     completion(categories.all)
                     return
